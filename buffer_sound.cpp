@@ -8,7 +8,7 @@
 #include <cmath>
 #include <iomanip>
 
-#define M_PI 3.14159265358979323846  // ✅ FIXED: PI constant for sin()
+#define M_PI 3.14159265358979323846 
 
 class AudioBuffer {
 private:
@@ -39,7 +39,7 @@ public:
         if (count == capacity) overflow = true;
 
         not_empty.notify_one();
-    }  // ✅ FIXED: No explicit unlock needed (RAII)
+    }  
 
     float consume() {
         std::unique_lock<std::mutex> lock(mtx);
