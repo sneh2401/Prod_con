@@ -103,7 +103,7 @@ int main() {
     std::thread prod(producer, std::ref(buf), SAMPLE_RATE, DURATION);
     std::thread cons(consumer, std::ref(buf), DURATION);
 
-    std :: cout<<"helloe"<<endl;
+    
     prod.join();
     cons.join();
 
